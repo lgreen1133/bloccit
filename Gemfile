@@ -56,3 +56,5 @@ end
 gem 'pry-rails', :group => :development
 
 gem 'bootstrap-sass'
+
+gem 'devise'
