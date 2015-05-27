@@ -1,0 +1,2 @@
+module WillPaginateHelper
+end
