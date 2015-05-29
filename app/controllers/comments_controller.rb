@@ -4,12 +4,14 @@ class CommentsController < ApplicationController
     comment = current_user.comments.build(comment_params)
     comment.post = post 
 
+    authorize comment 
+
     if comment.save
       flash[:notice] = "Comment was saved"
     else
       flash[:error] = "There was an error. Please try again."
     end
-    redirect_to [post.topic, post]
+      redirect_to [post.topic, post]
   end
 
   private
