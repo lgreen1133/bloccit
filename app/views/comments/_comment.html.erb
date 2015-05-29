@@ -2,7 +2,7 @@
   <% @post.comments.each do |comment| %>
   <div class="media-left">
     <a href="#">
-      <img class="media-object" src="comment.user.avatar.tiny.url"> <!-- Render the comments user's avatar here (similar to how we did it with posts) -->
+      <%= image_tag comment.user.avatar.tiny.url, class: 'media-object' %>
     </a>
   </div>
   <div class="media-body">
