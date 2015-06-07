@@ -1,23 +1,22 @@
 class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
-      @topic = Topic.find(params[:topic_id])
-        @new_comment = Comment.new 
+    @topic = Topic.find(params[:topic_id])
+    @comments = @post.comments
+    @comment = Comment.new 
   end
 
   def new
     @topic = Topic.find(params[:topic_id])
-      @post = Post.new
-        authorize @post
+    @post = Post.new
+    authorize @post
   end
 
     def create
       @topic = Topic.find(params[:topic_id])
-        @post = current_user.posts.build(post_params)
-          @post.topic = @topic 
-          @post.comment = @comment 
-            authorize @post
-            authorize @comment 
+      @post = current_user.posts.build(post_params)
+      @post.topic = @topic 
+      authorize @post
 
         if @post.save
         flash[:notice] = "Post was saved."
@@ -29,13 +28,13 @@ class PostsController < ApplicationController
     end
 
   def edit
-      @topic = Topic.find(params[:topic_id])
+    @topic = Topic.find(params[:topic_id])
     @post = Post.find(params[:id])
     authorize @post 
   end
 
     def update
-      @topic = Topic.find(params[:topic_id])
+    @topic = Topic.find(params[:topic_id])
     @post = Post.find(params[:id])
     authorize @post
 

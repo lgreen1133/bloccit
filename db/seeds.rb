@@ -40,7 +40,6 @@ require 'faker'
 
   post.update_attributes!(created_at: rand(10.minutes .. 1.year).ago)
   post.update_rank
-  end
   posts = Post.all 
 
   # Create Comments
@@ -51,6 +50,7 @@ require 'faker'
       body: Faker::Lorem.paragraph
     )
   end
+end
 
  # Create an admin user
  admin = User.new(
