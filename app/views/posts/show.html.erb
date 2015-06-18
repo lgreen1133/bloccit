@@ -9,7 +9,7 @@
      </small>
     <p><%= markdown_to_html @post.body %></p>
     <% if policy(Comment).create? %>
-    <%= render 'comments/comment' %>
+    <%= render @post.comments %>
     <%= render partial: 'comments/form', locals: {topic: @topic, post: @post, comment: @comment} %>
     <% end %>
   </div>

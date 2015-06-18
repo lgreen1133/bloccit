@@ -1,5 +1,5 @@
 <%= content_tag :div, class: 'media', id: "comment-#{comment.id}" do %>
-  <% @post.comments.each do |comment| %>
+  <% @post.comments %>
   <div class="media-left">
     <a href="#">
       <%= image_tag comment.user.avatar.tiny.url, class: 'media-object' %>
@@ -14,6 +14,5 @@
      <% end %>
     </small>
     <p><%= comment.body %></p>
-    <% end %>
   </div>
 <% end %>
