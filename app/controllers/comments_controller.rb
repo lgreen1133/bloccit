@@ -1,8 +1,11 @@
 class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
+    @comments = @post.comments 
+
     @comment = current_user.comments.build(comment_params)
-    @comment.post = @post 
+    @comment.post = @post
+    @new_comment = Comment.new  
 
     authorize @comment 
 
@@ -11,7 +14,11 @@ class CommentsController < ApplicationController
     else
       flash[:error] = "There was an error. Please try again."
     end
-      redirect_to [@post.topic, @post]
+    
+    respond_to do |format|
+      format.html
+      format.js 
+    end
   end
 
   def destroy
