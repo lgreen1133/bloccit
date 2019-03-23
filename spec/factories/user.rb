@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
  factory :user do
    name "Douglas Adams"
    sequence(:email, 100) { |n| "person#{n}@example.com" }

@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
  factory :post do
    title "Post Title"
    body "Post bodies must be pretty long."
