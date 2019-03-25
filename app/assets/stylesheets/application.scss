@@ -14,7 +14,8 @@
  *= require_self
  */
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
- @import "bootstrap";
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic");
+@import "bootstrap";
 
   .user-info {
    margin-top: 9px;
