@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.7'
+gem 'rails', '5.2.2.1'
 # Use sqlite3 as the database for Active Record
 # Removed sqlite3 per checkpoint Basic Rails App 299
 group :production do
@@ -11,14 +11,12 @@ group :production do
 end
 
 group :development do
-  gem 'sqlite3'
+  gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
 end
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.2'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -47,7 +45,7 @@ group :development, :test do
   gem 'byebug'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -57,7 +55,9 @@ end
 
 gem 'pry-rails', :group => :development
 
-gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.3.1'
+
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 gem 'devise'
 
@@ -77,4 +77,6 @@ gem 'will_paginate', '~> 3.0.5'
 
 gem 'capybara'
 
-gem 'factory_girl_rails', '~> 4.0'
+gem 'factory_bot'
+
+gem 'bootsnap'
