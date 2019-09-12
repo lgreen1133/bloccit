@@ -12,5 +12,3 @@ _Notes_
 Made with my mentor at [Bloc](http://bloc.io).
 
 Hosted app can be found via [Heroku](https://liz11-bloccit.herokuapp.com/).
-* *
-testing2
