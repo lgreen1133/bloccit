@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.6.3"
+ruby "2.7.0"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -81,3 +81,7 @@ gem 'capybara'
 gem 'factory_bot'
 
 gem 'bootsnap'
+
+gem 'execjs'
+
+gem 'mini_racer'
