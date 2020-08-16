@@ -81,3 +81,7 @@ gem 'capybara'
 gem 'factory_bot'
 
 gem 'bootsnap'
+
+gem 'execjs'
+
+gem 'mini_racer'
