@@ -85,3 +85,5 @@ gem 'bootsnap'
 gem 'execjs'
 
 gem 'mini_racer'
+
+gem "rack-timeout"
