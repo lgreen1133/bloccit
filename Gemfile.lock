@@ -52,7 +52,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    aliyun-sdk (0.7.3)
+    aliyun-sdk (0.8.0)
       nokogiri (~> 1.6)
       rest-client (~> 2.0)
     arel (9.0.0)
@@ -149,8 +149,8 @@ GEM
       fog-xml (~> 0.1.1)
       ipaddress (~> 0.5)
       json (>= 1.8, < 2.0)
-    fog-aliyun (0.3.18)
-      aliyun-sdk (~> 0.7.3)
+    fog-aliyun (0.3.19)
+      aliyun-sdk (~> 0.8.0)
       fog-core
       fog-json
       ipaddress (~> 0.8)
@@ -475,4 +475,4 @@ RUBY VERSION
    ruby 2.7.0p0
 
 BUNDLED WITH
-   1.17.2
+   2.1.2
